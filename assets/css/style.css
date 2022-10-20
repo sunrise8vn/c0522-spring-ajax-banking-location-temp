@@ -37,9 +37,12 @@ header .btn {
     left: 0;
     bottom: 0;
     width: 100vw;
-    height: 0;
+    height: 50px;
+    padding-top: 6px;
+    padding-left: 50px;
     padding-right: 50px;
-    color: #0f5132;
+    background: #7abde8;
+    color: #ffffff;
 }
 
 #message-alert {
@@ -89,4 +92,22 @@ label.error {
     display: list-item;
     margin-top: 5px;
     color: #842029;
+}
+
+table td span.select-tab {
+    border-left-width: 7px;
+    border-left-style: solid;
+    min-width: 0;
+    display: block;
+    height: 24px;
+    margin: 0 0 0 -4px;
+    padding: 0;
+}
+
+table td span.unselected {
+    border-left-color: #dfdfdf;
+}
+
+table td span.selected {
+    border-left-color: #5cb85c;
 }

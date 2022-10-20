@@ -76,19 +76,33 @@ class App {
         }
     }
 
-    static renderRowCustomer(obj) {
+    static renderRowCustomer(customer, locationRegion) {
         let str = `
-            <tr id="tr_${obj.id}">
-                <td>${obj.id}</td>
-                <td>${obj.fullName}</td>
-                <td>${obj.email}</td>
-                <td class="text-center">${obj.phone}</td>
-                <td class="text-end num-space">${obj.balance}</td>
-                <td>${obj.provinceName}</td>
-                <td>${obj.districtName}</td>
-                <td>${obj.wardName}</td>
-                <td>${obj.address}</td>
+            <tr id="tr_${customer.id}">
+                <td>
+                    <span class="select-tab unselected"></span>
+                </td>
+                <td>${customer.id}</td>
+                <td>${customer.fullName}</td>
+                <td>${customer.email}</td>
+                <td class="text-center">${customer.phone}</td>
+                <td class="text-end num-space">${customer.balance}</td>
+                <td>${locationRegion.provinceName}</td>
+                <td>${locationRegion.districtName}</td>
+                <td>${locationRegion.wardName}</td>
+                <td>${locationRegion.address}</td>
             </tr>
+        `;
+
+        return str;
+    }
+
+    static renderFooterButton() {
+        let str = `
+            <button class="btn btn-secondary update">
+                <i class="fas fa-pencil-alt"></i>
+                Update
+            </button>
         `;
 
         return str;
